@@ -18,7 +18,7 @@ from (
         Difficulty as D
       on C.difficulty_level = D.difficulty_level
     where 
-        D.score = S.score
+        D.score = S.score  -- maximun score == scored score
     group by 
         id, 
         name
@@ -26,7 +26,7 @@ from (
         nchallanges > 1
     order by 
         nchallanges desc, 
-        id    
-) as _
+        id              -- same scored multiple hackers in increasing ids
+) as _                  -- '_' alias name not being used
 ;
 
