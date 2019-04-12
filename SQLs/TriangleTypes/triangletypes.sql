@@ -12,4 +12,5 @@ select
         else
             'Not A Triangle'
     end as type
-from triangles;
+from triangles
+;
